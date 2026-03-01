@@ -4,8 +4,16 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-auth-utils",
     "@pinia/nuxt",
-    "@nuxtjs/tailwindcss",
   ],
+
+  css: ["~/assets/css/tailwind.css"],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 
   typescript: {
     strict: false,
