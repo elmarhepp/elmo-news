@@ -3,12 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "prisma generate && nuxt build",
+    "build": "nuxt prepare && prisma generate && nuxt build",
     "start": "prisma migrate deploy && node .output/server/index.mjs",
     "dev": "nuxt dev --port 3001",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx --env-file=.env prisma/seed.ts",
     "db:studio": "prisma studio"
