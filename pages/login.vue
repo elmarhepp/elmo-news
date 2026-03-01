@@ -1,6 +1,8 @@
 <script setup lang="ts">
 definePageMeta({ middleware: "auth" });
 
+const { fetch: refreshSession } = useUserSession();
+
 const email = ref("");
 const password = ref("");
 const error = ref("");
@@ -15,6 +17,7 @@ async function handleSubmit() {
       method: "POST",
       body: { email: email.value, password: password.value },
     });
+    await refreshSession();
     await navigateTo("/");
   } catch (e: any) {
     error.value = e?.data?.statusMessage ?? "Anmeldung fehlgeschlagen";
