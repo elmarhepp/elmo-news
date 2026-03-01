@@ -1,0 +1,22 @@
+# Nuxt
+.nuxt
+.output
+.data
+
+# Node
+node_modules
+
+# DB
+*.db
+*.db-journal
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Build
+dist
+
+# OS
+.DS_Store
