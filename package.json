@@ -26,6 +26,9 @@
     "rss-parser": "^3.13.0",
     "lucide-vue-next": "^0.469.0"
   },
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22",
