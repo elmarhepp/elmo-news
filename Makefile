@@ -1,4 +1,4 @@
-.PHONY: dev build install clean db-migrate db-seed db-studio db-reset
+.PHONY: dev build install clean db-migrate db-seed db-studio db-reset docker-up docker-down
 
 # Entwicklungsserver (Port 3001)
 dev:
@@ -32,3 +32,11 @@ db-studio:
 db-reset:
 	npx prisma migrate reset --force
 	npx tsx --env-file=.env prisma/seed.ts
+
+# PostgreSQL lokal via Docker starten
+docker-up:
+	docker compose up -d
+
+# PostgreSQL lokal stoppen
+docker-down:
+	docker compose down
