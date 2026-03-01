@@ -3,6 +3,9 @@
 .output
 .data
 
+# Next.js (nicht dieses Projekt)
+.next
+
 # Node
 node_modules
 
