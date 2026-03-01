@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    appManifest: false,
+  },
+
   typescript: {
     strict: false,
   },
